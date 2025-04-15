@@ -124,6 +124,8 @@ if __name__ == "__main__":
             print("ERROR: Failed to capture frame")
             break
 
+# flip the frame so that it is not the mirror view
+        frame = cv2.flip(frame, 1)
         frame = detector.process_frame(frame)
         cv2.imshow('Hand Control - DEBUG MODE', frame)
 
